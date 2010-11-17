@@ -1,0 +1,11 @@
+<?=$this->placeholder('header')->set($this->translate('Access Forbidden'));?>
+
+<?php if ($this->auth()->hasIdentity()) : ?>
+	<p><?=$this->translate('You do not have permission to view the requested resource.')?></p>
+<?php else :?>
+	<p><?=$this->translate('You must login to view that resource.');?></p>
+	<?=$this->showForm();?>
+<?php endif;?>
+
+<h3>Request Parameters</h3>
+<pre><?php echo var_export($this->request->getParams(), true) ?></pre>
