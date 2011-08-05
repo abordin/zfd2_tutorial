@@ -2,14 +2,13 @@
 ## GENERAL SETTINGS
 ################################################
 url_rewrites:
-    - ^.*$ /index.php
 	
 ################################################
 ## WEB SPECIFIC SETTINGS
 ################################################
 document_root: /
 index_list: [index.php]
-default_gateway: index.php
+default_gateway: public/index.php
 
 ################################################
 ## PHP SPECIFIC SETTINGS
